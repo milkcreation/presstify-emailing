@@ -1,0 +1,8 @@
+Admin:
+  emailingLogs:
+    admin_menu :
+      parent_slug:        'tify_emailing'
+      menu_title:         "<?php _e( 'Maintenance', 'tify' );?>"
+      position:           10
+    cb:                 'tiFy\Plugins\Emailing\Admin\Maintenance\Maintenance'
+     

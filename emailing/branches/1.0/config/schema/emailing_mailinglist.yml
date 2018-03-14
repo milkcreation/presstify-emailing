@@ -1,0 +1,77 @@
+Db:
+  name:           'wistify_list'
+  install:        true
+  col_prefix:     'list_'
+  meta:           false
+  columns:
+    id:
+      type:           BIGINT
+      size:           20
+      unsigned:       true
+      auto_increment: true
+
+    uid:
+      type:           VARCHAR
+      size:           32
+
+    title:
+      type:           VARCHAR
+      size:           255
+
+    description:
+      type:           LONGTEXT
+
+    date:
+      type:           DATETIME
+      default:        '0000-00-00 00:00:00'
+
+    modified:
+      type:           DATETIME
+      default:        '0000-00-00 00:00:00'
+
+    status:
+      type:           VARCHAR
+      size:           20
+      default:        'publish'
+
+    menu_order:
+      type:           BIGINT
+      size:           20
+      default:        0
+
+    public:
+      type:           TINYINT
+      size:           1
+      default:        1
+
+  search:             [ 'title', 'description' ]
+
+  cb:                 'tiFy\Plugins\Emailing\Db\MailingList'  
+
+Admin:     
+  emailingMailingListListTable:
+    admin_menu:            
+      parent_slug:      'tify_emailing'
+      position:         3
+    cb:               'tiFy\Plugins\Emailing\Admin\MailingList\ListTable\ListTable'
+    edit_template:    'emailingMailingListEditForm'
+   
+  emailingMailingListEditForm:
+    admin_menu:
+      parent_slug:      'tify_emailing'
+      position:         4 
+    cb:               'tiFy\Plugins\Emailing\Admin\MailingList\EditForm\EditForm'
+        
+Labels:
+  name:               "<?php _e( 'Listes de diffusion', 'tify' );?>"
+  singular_name:      "<?php _e( 'Liste de diffusion', 'tify' );?>"
+  menu_name:          "<?php _e( 'Listes de diffusion', 'tify' );?>"
+  name_admin_bar:     "<?php _e( 'Liste de diffusion', 'tify' );?>"
+  all_items:          "<?php _e( 'Toutes les listes de diffusion', 'tify' );?>"
+  add_new:            "<?php _e( 'Ajouter une liste de diffusion', 'tify' );?>"
+  edit_item:          "<?php _e( 'Editer la liste de diffusion', 'tify' );?>"
+  new_item:           "<?php _e( 'Nouvelle liste de diffusion', 'tify' );?>"
+  view_item:          "<?php _e( 'Voir la liste de diffusion', 'tify' );?>"
+  search_items:       "<?php _e( 'Rechercher une liste de diffusion', 'tify' );?>"
+  not_found:          "<?php _e( 'Aucune liste de diffusion trouvée', 'tify' );?>"
+  not_found_in_trash: "<?php _e( 'Aucune liste de diffusion dans la corbeille', 'tify' );?>"  

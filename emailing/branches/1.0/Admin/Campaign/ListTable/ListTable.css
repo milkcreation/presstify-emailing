@@ -1,0 +1,9 @@
+table > tbody > tr > td ul{
+	margin:0; padding:0;
+}
+table > tbody > tr > td ul > li{
+	margin:0; padding:0;
+}
+table > tbody > tr > td ul > li label{
+	vertical-align:top;
+}

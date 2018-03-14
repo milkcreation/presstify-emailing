@@ -1,0 +1,15 @@
+#tiFyPluginEmailingCampaign-edit #step-edit-1 #title{
+	background-color: #fff;
+    font-size: 1.7em;
+    height: 1.7em;
+    line-height: 100%;
+    margin: 0;
+    margin-bottom:20px;
+    outline: 0 none;
+    padding: 3px 8px;
+    width: 100%;
+}
+#tiFyPluginEmailingCampaign-edit #step-edit-1 #content textarea{
+	height:10em;
+	font-size:16px;
+}

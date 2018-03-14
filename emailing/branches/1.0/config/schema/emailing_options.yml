@@ -1,0 +1,8 @@
+Admin:
+  emailingOptions:
+    admin_menu:
+      parent_slug:        'tify_emailing'
+      menu_title:         "<?php _e( 'Options', 'tify' );?>"
+      position:           9
+    cb:                 'tiFy\Plugins\Emailing\Admin\Options\Options'
+            
