@@ -1,6 +1,6 @@
 {
   "name": "presstify-plugins/emailing",
-  "description": "PresstiFy Plugin Cpanel",
+  "description": "PresstiFy Plugin Emailing",
   "type": "presstify-plugins",
   "keywords": ["presstify", "plugins", "wordpress", "emailing"],
   "homepage": "http://svn.milkcreation.fr/presstify-plugins/emailing",
