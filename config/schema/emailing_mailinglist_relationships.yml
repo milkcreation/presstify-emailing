@@ -1,0 +1,36 @@
+Db:
+  name:           'wistify_list_relationships'
+  install:        true
+  col_prefix:     'rel_'
+  meta:           false
+  columns:
+    id:
+      type:           BIGINT
+      size:           20
+      unsigned:       true
+      auto_increment: true
+
+    subscriber_id:
+      type:           BIGINT
+      size:           20
+      unsigned:       true
+
+    list_id:
+      type:           BIGINT
+      size:           20
+      default:        0
+      unsigned:       true
+
+    active:
+      type:           TINYINT
+      size:           1
+
+    created:
+      type:           DATETIME
+      default:        '0000-00-00 00:00:00'
+
+    modified:
+      type:           DATETIME
+      default:        '0000-00-00 00:00:00'
+  
+  cb:                 'tiFy\Plugins\Emailing\Db\MailingList_Relationships'   
