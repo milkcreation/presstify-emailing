@@ -3,7 +3,7 @@
 Plugin Name: Emailing
 Plugin URI: http://presstify.com/plugins/premiums/Emailing
 Description: Gestionnaire de campagne d'emailing
-Version: 1.2.464
+Version: 1.0.0
 Author: Milkcreation
 Author URI: http://milkcreation.fr
 */
