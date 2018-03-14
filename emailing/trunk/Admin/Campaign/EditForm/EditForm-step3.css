@@ -1,0 +1,158 @@
+#tiFyPluginEmailingCampaign-edit #step-edit-3 #recipient-search > input {
+    font-size: 1.7em;
+}
+
+.tiFyControlSuggest-picker--recipient-search {
+    max-height: 250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.tiFyControlSuggest-picker--recipient-search > li {
+    border-bottom: solid 1px #DDD;
+    margin: 0;
+    padding: 0;
+}
+
+.tiFyControlSuggest-picker--recipient-search > li > a {
+    position: relative;
+    height: 50px;
+    display: block;
+    overflow: hidden;
+    background-color: #FAFAFA;
+    text-decoration: none;
+    padding: 0;
+}
+
+.tiFyControlSuggest-picker--recipient-searchr > li > a:hover {
+    background-color: #F4F4F4;
+}
+
+.tiFyControlSuggest-picker--recipient-search > li > a > .ico {
+    position: relative;
+    float: left;
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    font-size: 24px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.tiFyControlSuggest-picker--recipient-search > li > a > .ico > .badge {
+    position: absolute;
+    bottom: 5px;
+    right: 0px;
+    font-size: 24px;
+    line-height: 100%;
+    color: #999;
+}
+
+.tiFyControlSuggest-picker--recipient-search > li > a > .ico > .badge.dashicons {
+    font-size: 16px;
+}
+
+.tiFyControlSuggest-picker--recipient-search > li > a > .label {
+    display: block;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.tiFyControlSuggest-picker--recipient-search > li > a > .type {
+}
+
+.tiFyControlSuggest-picker--recipient-search > li > a > .numbers {
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    color: #FFF;
+    background-color: #45BBE6;
+    font-size: 10px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 30px;
+    line-height: 30px;
+}
+
+#recipients-list {
+}
+
+#recipients-list > li {
+    border: solid 1px #DDD;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 5px;
+    position: relative;
+    height: 50px;
+    display: block;
+    background-color: #FFF;
+    z-index: 1;
+}
+
+#recipients-list > li > .ico {
+    position: relative;
+    float: left;
+    display: block;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    line-height: 50px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+#recipients-list > li > .ico > .badge {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    font-size: 24px;
+    line-height: 1;
+    color: #999;
+}
+
+#recipients-list > li > .ico > .badge.dashicons {
+    font-size: 16px;
+}
+
+#recipients-list > li > .label {
+    display: block;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+#recipients-list > li > .numbers {
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 50px;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    color: #FFF;
+    background-color: #45BBE6;
+    font-size: 10px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 30px;
+    line-height: 30px;
+}
+
+#recipients-total {
+    border-top: solid 1px #CCC;
+    margin-top: 5px;
+    padding-top: 10px;
+    text-align: right;
+    font-size: 18px;
+}
+
+#recipients-total .label {
+    text-transform: uppercase;
+}
