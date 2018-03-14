@@ -1,0 +1,97 @@
+Db:
+  name:           'wistify_report'
+  install:      true
+  col_prefix:   'report_'
+  meta:         false
+  columns:  
+    id:
+      type:           BIGINT
+      size:           20
+      unsigned:       true
+      auto_increment: true
+
+    campaign_id:
+      type:           BIGINT
+      size:           20
+      unsigned:       true
+      default:        0
+
+    posted_ts:
+      type:           INT
+      size:           13
+      default:        0
+
+    updated_ts:
+      type:           INT
+      size:           13
+      default:        0
+
+    md_ts:
+      type:           INT
+      size:           13
+      default:        0
+
+    md__id:
+      type:           VARCHAR
+      size:           32
+
+    md_sender:
+      type:           VARCHAR
+      size:           255
+
+    md_template:
+      type:           VARCHAR
+      size:           255
+
+    md_subject:
+      type:           VARCHAR
+      size:           255
+
+    md_email:
+      type:           VARCHAR
+      size:           255
+
+    md_tags:
+      type:           LONGTEXT
+
+    md_opens:
+      type:           INT
+      size:           5
+
+    md_opens_detail:
+      type:           LONGTEXT
+
+    md_clicks:
+      type:           INT
+      size:           5
+
+    md_clicks_detail:
+      type:           LONGTEXT
+
+    md_state:
+      type:           VARCHAR
+      size:           25
+
+    md_metadata:
+      type:           LONGTEXT
+
+    md_smtp_events:
+      type:           LONGTEXT
+
+    md_resends:
+      type:           LONGTEXT
+
+    md_reject_reason:
+      type:           LONGTEXT
+
+  search:             [ 'md_email' ]
+      
+Labels:
+  name:               <?php _e( 'Rapports d\'envois', 'tify' );?>
+  singular_name:      <?php _e( 'Rapport d\'envois', 'tify' );?>
+  menu_name:          <?php _e( 'Rapports d\'envois', 'tify' );?>
+  name_admin_bar:     <?php _e( 'Rapport d\'envoi', 'tify' );?>
+  all_items:          <?php _e( 'Toutes les rapports d\'envois', 'tify' );?>
+  search_items:       <?php _e( 'Rechercher un rapport d\'envoi', 'tify' );?>
+  not_found:          <?php _e( 'Aucun rapport d\'envoi trouvé', 'tify' );?>
+  not_found_in_trash: <?php _e( 'Aucun rapport d\'envoi dans la corbeille', 'tify' );?>

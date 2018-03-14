@@ -1,0 +1,83 @@
+Db:
+  name:           'wistify_subscriber'
+  install:        true
+  col_prefix:     'subscriber_'
+  meta:           true
+  columns:
+    id:
+      type:           BIGINT
+      size:           20
+      unsigned:       true
+      auto_increment: true
+  
+    uid:
+      type:           VARCHAR
+      size:           32
+      default:        null
+  
+    email:
+      type:           VARCHAR
+      size:           255
+  
+    date:
+      type:           DATETIME
+      default:        '0000-00-00 00:00:00'
+  
+    modified:
+      type:           DATETIME
+      default:        '0000-00-00 00:00:00'
+  
+    status:
+      type:           VARCHAR
+      size:           255
+      default:        'registred'
+  
+  search:             [ 'email' ]
+
+  relations:
+    wistify_list_relationships:   [ 'rel_subscriber_id' ]
+    
+  cb:                 'tiFy\Plugins\Emailing\Db\Subscriber\Factory'
+
+Admin:     
+  emailingSubscriberListTable:
+    admin_menu:
+      parent_slug:     'tify_emailing'
+      position:        5
+    cb:               'tiFy\Plugins\Emailing\Admin\Subscriber\ListTable\ListTable'
+    edit_template:    'emailingSubscriberEditForm'
+    
+  emailingSubscriberEditForm:
+    admin_menu:
+      parent_slug:     'tify_emailing'
+      position:        6
+    cb:                'tiFy\Plugins\Emailing\Admin\Subscriber\EditForm\EditForm'
+    
+  emailingSubscriberImport:
+    admin_menu:
+      menu_title:      <?php _e('Import d\'abonnés', 'tify');?>
+      parent_slug:     'tify_emailing'
+      position:        7
+    cb:                'tiFy\Plugins\Emailing\Admin\Subscriber\Import\Import'
+
+  #emailingSubscriberMessager:
+  #  admin_menu:
+  #    menu_title:      <?php _e('Messager', 'tify');?>
+  #    parent_slug:     'tify_emailing'
+  #    position:        8
+  #  cb:                'tiFy\Plugins\Emailing\Admin\Subscriber\Messager\Messager'
+        
+Labels:
+  name:               "<?php _e( 'Abonnés', 'tify' );?>"
+  singular_name:      "<?php _e( 'Abonné', 'tify' );?>"
+  menu_name:          "<?php _e( 'Abonnés', 'tify' );?>"
+  name_admin_bar:     "<?php _e( 'Abonné', 'tify' );?>"
+  all_items:          "<?php _e( 'Tous les abonnés', 'tify' );?>"
+  add_new:            "<?php _e( 'Ajouter un abonné', 'tify' );?>"
+  edit_item:          <?php _e( 'Editer l\'abonné', 'tify' );?>
+  new_item:           "<?php _e( 'Nouvel abonné', 'tify' );?>"
+  view_item:          <?php _e( 'Voir l\'abonné', 'tify' );?>
+  search_items:       "<?php _e( 'Rechercher un abonné', 'tify' );?>"
+  not_found:          "<?php _e( 'Aucun abonné trouvé', 'tify' );?>"
+  not_found_in_trash: "<?php _e( 'Aucun abonné dans la corbeille', 'tify' );?>"
+  import_items:       "<?php _e( 'Import abonnés', 'tify' );?>"      
