@@ -1,0 +1,6 @@
+html .mceContentBody {
+    max-width:600px;
+    margin:20px auto;
+    padding:0px;
+    border:dashed 4px #DDD;   
+}

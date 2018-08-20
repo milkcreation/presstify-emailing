@@ -1,0 +1,24 @@
+.tiFyCoreTemplatesAdminModelMessager-mailOptions {
+
+}
+.tiFyCoreTemplatesAdminModelMessager-mailOption::before,
+.tiFyCoreTemplatesAdminModelMessager-mailOption::after {
+    display:table;
+    content:'';
+}
+.tiFyCoreTemplatesAdminModelMessager-mailOption::after {
+    clear:both;
+}
+.tiFyCoreTemplatesAdminModelMessager-mailOption {
+    display:block;
+}
+.tiFyCoreTemplatesAdminModelMessager-mailOptionLabel,
+.tiFyCoreTemplatesAdminModelMessager-mailOptionContent {
+    float:left;
+}
+.tiFyCoreTemplatesAdminModelMessager-mailOptionLabel{
+    width:200px;
+}
+.tiFyCoreTemplatesAdminModelMessager-mailOptionContent{
+    width:calc(100% - 200px);
+}

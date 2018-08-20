@@ -1,0 +1,6 @@
+- désinscription / réinscription rapide depuis la page liste
+2016/07/06 - Tester la lecture du mail :
+https://en.wikipedia.org/wiki/Web_beacon
+http://stackoverflow.com/questions/1900236/how-to-check-if-a-mail-was-received-with-php
+http://stackoverflow.com/questions/4603850/php-check-who-had-read-sent-email
+http://stackoverflow.com/questions/20729172/how-can-i-know-if-someone-has-opened-an-email
