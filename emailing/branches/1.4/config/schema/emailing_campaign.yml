@@ -1,0 +1,106 @@
+Db:
+  name:           'wistify_campaign'
+  install:        true
+  col_prefix:     'campaign_'
+  meta:           true
+  columns:
+    id:
+      type:           BIGINT
+      size:           20
+      unsigned:       true
+      auto_increment: true
+
+    uid:
+      type:           VARCHAR
+      size:           32
+      default:        null
+
+    title:
+      type:           VARCHAR
+      size:           255
+      default:        null
+
+    description:
+      type:           VARCHAR
+      size:           255
+      default:        null
+
+    author:
+      type:           BIGINT
+      size:           20
+      unsigned:       true
+      default:        0
+
+    date: 
+      type:           DATETIME
+      default:        '0000-00-00 00:00:00'
+
+    modified:
+      type:           DATETIME
+      default:        '0000-00-00 00:00:00'
+
+    status:
+      type:           VARCHAR
+      size:           25
+      default:        'draft'
+
+    step: 
+      type:           INT
+      size:           2
+      default:        0
+
+    template_name:
+      type:           LONGTEXT
+
+    content_html:
+      type:           LONGTEXT
+
+    content_txt:
+      type:           LONGTEXT
+
+    recipients:
+      type:           LONGTEXT
+
+    message_options:
+      type:           LONGTEXT
+
+    send_options:
+      type:           LONGTEXT
+
+    send_datetime:
+      type:           DATETIME
+      default:        '0000-00-00 00:00:00'
+
+  search:             [ 'title', 'description' ]
+  
+  cb:                 'tiFy\Plugins\Emailing\Db\Campaign'
+
+Admin:     
+  emailingCampaignListTable:
+    admin_menu :
+      parent_slug:      'tify_emailing'
+      menu_slug:        'tify_emailing'
+      position:         1
+    cb:               'tiFy\Plugins\Emailing\Admin\Campaign\ListTable\ListTable'
+    edit_template:    'emailingCampaignEditForm'  
+    
+  emailingCampaignEditForm:
+    admin_menu :
+      parent_slug:      'tify_emailing'
+      position:         2
+    cb:               'tiFy\Plugins\Emailing\Admin\Campaign\EditForm\EditForm'
+    list_template:    'emailingCampaignListTable' 
+    
+Labels:
+  name:               "<?php _e( 'Campagnes', 'tify' );?>"
+  singular_name:      "<?php _e( 'Campagne', 'tify' );?>"
+  menu_name:          "<?php _e( 'Campagnes', 'tify' );?>"
+  name_admin_bar:     "<?php _e( 'Campagne', 'tify' );?>"
+  all_items:          "<?php _e( 'Toutes les campagnes', 'tify' );?>"
+  add_new:            "<?php _e( 'Ajouter une campagne', 'tify' );?>"
+  edit_item:          "<?php _e( 'Editer la campagne', 'tify' );?>"
+  new_item:           "<?php _e( 'Nouvelle campagne', 'tify' );?>"
+  view_item:          "<?php _e( 'Voir la campagne', 'tify' );?>"
+  search_items:       "<?php _e( 'Rechercher une campagne', 'tify' );?>"
+  not_found:          "<?php _e( 'Aucune campagne trouvée', 'tify' );?>"
+  not_found_in_trash: "<?php _e( 'Aucune campagne dans la corbeille', 'tify' );?>"    
