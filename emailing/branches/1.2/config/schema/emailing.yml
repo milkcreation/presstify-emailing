@@ -1,0 +1,6 @@
+Admin:
+  emailingMenu:
+    admin_menu:
+      menu_slug:        'tify_emailing'
+      menu_title:       "<?php _e( 'Emailing', 'tify' );?>"
+      icon_url:         'dashicons-email-alt'      

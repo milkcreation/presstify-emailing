@@ -1,0 +1,34 @@
+Db:
+  name:           'wistify_queue'
+  install:        true
+  col_prefix:     'queue_'
+  meta:           false
+  columns:
+    id:
+      type:           BIGINT
+      size:           20
+
+    email: 
+      type:           VARCHAR
+      size:           255
+
+    campaign_id:
+      type:           BIGINT
+      size:           20
+      unsigned:       true
+
+    message:
+      type:           LONGTEXT
+  
+    locked:
+      type:           INT
+      size:           13
+      default:        0
+    
+    errors:
+      type:           LONGTEXT
+      default:        null
+    
+  search:             [ 'email' ]
+  
+  cb:                 'tiFy\Plugins\Emailing\Db\MailQueue'  
