@@ -5,23 +5,20 @@ use tiFy\Plugins\Emailing\Message;
 
 class Template extends \tiFy\App\Factory
 {
-    /**
-     * CONSTRUCTEUR
-     *
-     * @return void
-     */
+	/* = ARGUMENTS = */
+	// Liste des actions à déclencher
+	protected $tFyAppActions				= array(
+		'init',
+		'template_redirect'
+	); 
+	
+	/* = CONSTRUCTEUR = */
 	public function __construct()
 	{
 		parent::__construct();
-
-        // Déclaration des événements
-        $this->appAddAction('init');
-        $this->appAddAction('template_redirect');
 	}
-
-    /**
-     * EVENEMENTS
-     */
+	
+	/* = ACTIONS = */
 	/** == Initialisation global == **/
 	public function init()
 	{
