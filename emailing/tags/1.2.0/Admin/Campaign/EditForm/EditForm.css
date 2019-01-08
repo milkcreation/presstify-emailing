@@ -1,0 +1,92 @@
+/** == FIL D'ARIANE DES ETAPES == **/
+#tiFyPluginEmailingCampaign-edit #step-breadcrumb{
+	position: relative;
+	background: none repeat scroll 0 0 #fff;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+    color: #555;
+    display: inline-block;
+    font-size: 13px;
+    margin: 0 0 25px;
+    padding: 0;    
+    width: 100%;
+}
+#tiFyPluginEmailingCampaign-edit #step-breadcrumb > li:after{
+	position:absolute;
+	right:0; top:50%;
+	width: 28px; height: 28px;
+	margin-top:-14px;
+	border-style: solid;
+	border-width: 1px 1px 0 0;
+	border-color:#e5e5e5;
+	content: '';
+	display: inline-block;	
+	transform: rotate(45deg);
+	vertical-align: middle;	
+}
+#tiFyPluginEmailingCampaign-edit #step-breadcrumb > li:last-child:after{
+	display:none;
+}
+#tiFyPluginEmailingCampaign-edit #step-breadcrumb > li{
+	position:relative;
+	float:left;
+	width:20%;
+	margin:0; padding:0;
+}
+#tiFyPluginEmailingCampaign-edit #step-breadcrumb > li > a,
+#tiFyPluginEmailingCampaign-edit #step-breadcrumb > li > span{
+	display:block;
+	padding:5px 10px;
+	text-align:center;
+	text-decoration:none;
+	font-weight:600;
+	font-size:16px;
+	color:#E5E5E5;
+}
+#tiFyPluginEmailingCampaign-edit #step-breadcrumb > li > a{
+	color:#555;
+}
+#tiFyPluginEmailingCampaign-edit #step-breadcrumb > li.current > span{
+	color:#45BBE6;
+}
+/** == INTERFACE DE SAISIE == **/
+/*** === GLOBAL === ***/	
+/**** ==== BOÎTE DE SOUMISSION ==== ****/
+#tiFyPluginEmailingCampaign-edit #submitdiv .minor_actions .nav:before,
+#tiFyPluginEmailingCampaign-edit #submitdiv .minor_actions .nav:after{
+	display: table;
+	content: "";
+}
+#tiFyPluginEmailingCampaign-edit #submitdiv .minor_actions .nav{
+	padding:10px 0;
+}
+#tiFyPluginEmailingCampaign-edit #submitdiv .minor_actions .nav:after{
+	clear:both;
+}
+#tiFyPluginEmailingCampaign-edit #submitdiv .minor_actions .nav > .prev{
+	float:left;
+}
+#tiFyPluginEmailingCampaign-edit #submitdiv .minor_actions .nav > .next{
+	float:right;
+}
+/*** === ETAPE #1 === ***/
+/**** ==== TITRE ==== ****/
+#tiFyPluginEmailingCampaign-edit #step-edit-1 #title{
+	background-color: #fff;
+    font-size: 1.7em;
+    height: 1.7em;
+    line-height: 100%;
+    margin: 0;
+    margin-bottom:20px;
+    outline: 0 none;
+    padding: 3px 8px;
+    width: 100%;
+}
+#tiFyPluginEmailingCampaign-edit #step-edit-1 #content textarea{
+	height:10em;
+	font-size:16px;
+}
+#tiFyPluginEmailingCampaign-edit #step-edit-1 [data-tify_control="dropdown"]{
+	display:block;
+}
