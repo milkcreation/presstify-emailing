@@ -3,7 +3,7 @@ namespace tiFy\Plugins\Emailing\Admin\Subscriber\Import;
 
 use tiFy\Core\Db\Db;
 
-class Import extends \tiFy\Core\Templates\Admin\Model\FileImport\FileImport
+class Import extends \tiFy\Core\Templates\Admin\Model\CsvImport\CsvImport
 {
     public function set_columns()
     {

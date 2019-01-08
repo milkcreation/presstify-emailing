@@ -40,18 +40,21 @@ class MailingList_Relationships extends DbFactory
 	
 		return $wpdb->delete( $this->Name, array( 'rel_subscriber_id' => $subscriber_id ) );
 	}
-	 
-	/** == Vérifie si un abonné est affilié à la liste des orphelins == **/
-	public function is_orphan( $subscriber_id, $active = null )
-	{
-		global $wpdb;
-		
-		$query = "SELECT * FROM ". $this->Name ." WHERE rel_subscriber_id = %d AND rel_list_id = 0";
-		
-		if( ! is_null( $active ) ) :
-			 $query .= " AND rel_active = %d";
-		endif;
-		
-		return $wpdb->query( $wpdb->prepare( $query, $subscriber_id, $active ) );
-	} 
+
+    /** == Vérifie si un abonné est affilié à la liste des orphelins == **/
+    public function is_orphan($subscriber_id, $active = null)
+    {
+        global $wpdb;
+
+        $query = "SELECT * FROM " . $this->Name . " WHERE rel_subscriber_id = %d AND rel_list_id = 0";
+
+        if (!is_null($active)) :
+            $query .= " AND rel_active = %d";
+            $prepare = $wpdb->prepare($query, $subscriber_id, $active);
+        else :
+            $prepare = $wpdb->prepare($query, $subscriber_id);
+        endif;
+
+        return $wpdb->query($prepare);
+    }
 }
