@@ -3,8 +3,7 @@
   "description": "PresstiFy Plugin Emailing",
   "type": "presstify-plugins",
   "keywords": ["presstify", "plugins", "wordpress", "emailing"],
-  "homepage": "http://svn.milkcreation.fr/presstify-plugins/emailing",
-  "license": "proprietary",
+  "homepage": "https://github.com/milkcreation/presstify-emailing.git",
   "authors": [
     {
       "name": "Jordy Manner",
